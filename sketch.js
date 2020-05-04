@@ -21,16 +21,16 @@ function draw() {
   background(0, 184, 148);
   frameRate(30);
   stroke(255);
-  for(let p of kmeans.points){
-    p.show();
-    if (lines)
-      p.drawLines();
-  }
   if (train){
     frameRate(4);
     kmeans.findCentroids();
     kmeans.updateCentroids();
     kmeans.showCentroids();
+  }
+  for(let p of kmeans.points){
+    p.show();
+    if (lines)
+      p.drawLines();
   }
 }
 

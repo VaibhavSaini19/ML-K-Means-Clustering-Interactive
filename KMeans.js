@@ -1,5 +1,6 @@
 class KMeans{
   constructor(){
+    this.k = 3;
     this.points = [];
     this.centroids = [];
     this.setK();
